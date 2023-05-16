@@ -23,3 +23,9 @@
         background: #6039A0;
     }
 }
+
+@mixin bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
