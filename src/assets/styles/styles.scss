@@ -752,6 +752,124 @@
     }
 }
 
+.footer {
+    padding-top: 156px;
+    position: relative;
+    padding-bottom: 20px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 786px;
+        width: 439px;
+        position: absolute;
+        top: 0;
+        right: 20%;
+        z-index: -1;
+        background: url(../images/footer.png) no-repeat center/cover;
+    }
+
+    &-top {
+        justify-content: space-between;
+    }
+
+    &-menu {
+        column-gap: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        text-transform: uppercase;
+        transition: color .25s ease;
+
+        a {
+            color: rgba(255, 255, 255, .5);
+
+            &:hover {
+                color: $violet;
+            }
+        }
+    }
+
+    &-lang {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 27px;
+        cursor: pointer;
+
+        span {
+            text-transform: uppercase;
+            color: $grey;
+            margin-right: 5px;
+        }
+
+        &__current {
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        &__list {
+            position: relative;
+
+            &:hover {
+                .footer-lang__content {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__content {
+            background: $dark;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            visibility: hidden;
+
+            &-item {
+                text-transform: uppercase;
+                font-weight: 500;
+                cursor: pointer;
+                transition: color .25s ease;
+
+                &:hover {
+                    color: $violet;
+                }
+            }
+        }
+    }
+
+    &-info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: $grey;
+        margin: 50px auto 38px auto;
+        max-width: 700px;
+    }
+
+    &-icon {
+        text-align: center;
+    }
+
+    &-year {
+        margin: 20px auto 13px auto;
+    }
+
+    &-year,
+    &-rights {
+        font-weight: 400;
+        line-height: 19px;
+        color: $grey;
+        text-align: center;
+
+        a {
+            color: $violet;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
 @keyframes gravitation {
     0% {
         transform: translateY(-15px);
