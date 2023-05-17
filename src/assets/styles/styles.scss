@@ -42,6 +42,10 @@
     &-explore {
         margin-top: 80px;
     }
+
+    &-news {
+        margin-top: 100px;
+    }
 }
 
 .header {
@@ -590,6 +594,92 @@
         @include button($orange);
         @include hoverOrange;
         margin-top: 28px;
+    }
+}
+
+.news {
+    margin-top: 32px;
+    transition: transform .5s;
+    transform: translate(0);
+
+    &-item {
+        background: linear-gradient(177.87deg, #30373F 41.63%, #141615 185.57%);
+        border-radius: 6px;
+        padding: 20px;
+
+        &__info {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__subtitle {
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 12;
+            text-transform: uppercase;
+            color: $violet;
+        }
+
+        &__date {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 17px;
+            color: $grey;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 23px;
+            text-transform: uppercase;
+            color: $white;
+            margin: 7px 0 16px 0;
+        }
+
+        &__description {
+            column-gap: 24px;
+            height: 248px;
+            align-items: flex-start;
+        }
+
+        &__img {
+            min-width: 287px;
+            height: 100%;
+            @include bg
+        }
+
+        &__text {
+            flex-direction: column;
+            height: 100%;
+
+            p {
+                color: #D9D9D9;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+
+        &__button {
+            background: $grey;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: $white;
+            margin-top: 10px;
+            padding: 8px 30px;
+            display: flex;
+            width: max-content;
+            margin-left: auto;
+            margin-top: auto;
+            transition: background .25s;
+
+            &:hover {
+                background: $dark;
+            }
+        }
     }
 }
 
