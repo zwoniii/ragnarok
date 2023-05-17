@@ -868,7 +868,40 @@
     }
 }
 
-
+.swiper {
+    &-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background: #8c96a0;
+      border-radius: 6px;
+      z-index: 9;
+      cursor: pointer;
+      transition: background 0.25s;
+  
+      &:hover {
+        background: $violet;
+      }
+  
+      svg {
+        fill: #fff;
+      }
+  
+      &-prev {
+        left: 10%;
+      }
+  
+      &-next {
+        right: 10%;
+  
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+    }
+  }
 
 @keyframes gravitation {
     0% {
