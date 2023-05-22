@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve"
+    "webpack:development": "node --max-old-space-size=8192 ./node_modules/cross-env/src/bin/cross-env.js NODE_ENV=development node --max-old-space-size=8192 ./node_modules/webpack-cli/bin/cli.js build --mode development",
+    "webpack:production": "node --max-old-space-size=8192 ./node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node --max-old-space-size=8192 ./node_modules/webpack-cli/bin/cli.js build --mode production",
+    "webpack:watch": "node --max-old-space-size=8192 ./node_modules/cross-env/src/bin/cross-env.js NODE_ENV=development node --max-old-space-size=8192 ./node_modules/webpack-cli/bin/cli.js build --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,23 @@
   },
   "homepage": "https://github.com/zwoniii/ragnarok#readme",
   "devDependencies": {
-    "css-loader": "^6.7.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.4",
+    "css-minimizer-webpack-plugin": "^5.0.0",
     "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
     "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
+    "sass-loader": "^13.3.0",
     "serve": "^14.2.0",
-    "style-loader": "^3.3.2",
-    "webpack": "^5.82.1",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.83.1",
+    "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
   }
